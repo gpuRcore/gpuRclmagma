@@ -1,0 +1,22 @@
+Package: gpuRclmagma
+Type: Package
+Title: clMAGMA Functions for R Objects
+Version: 0.1.0
+Author: Charles Determan Jr.
+Maintainer: Charles Determan Jr. <cdetermanjr@gmail.com>
+Description: This package is designed to be an extension of the gpuR and
+    gpuRclblas packages.  The classes herein inherit the gpuR/gpuRclblas
+    classes as all the functions herein are intended to also be implemented
+    with the respective ViennaCL (OpenCL) version in gpuR.  This package will
+    allow the user to easily use the same functions with the clMAGMA backend.
+License: GPL (>= 2)
+LazyData: TRUE
+Depends:
+	gpuR
+Imports:
+    Rcpp (>= 0.12.5),
+    gpuRclblas
+LinkingTo: Rcpp, RcppEigen, gpuR, RViennaCL
+Suggests:
+    testthat
+RoxygenNote: 5.0.1

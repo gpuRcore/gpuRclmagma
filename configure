@@ -1,0 +1,13 @@
+####################################
+# configure for package gpuRclblas
+# Charles Determan Jr.
+
+CXX_STD="CXX_STD=CXX11"
+PKG_CXXFLAGS="PKG_CXXFLAGS=-I../inst/include -I/usr/local/clmagma/include"
+PKG_LIBS="PKG_LIBS="
+
+PKG_LIBS="${PKG_LIBS} -L/usr/local/clmagma/lib -Wl,-rpath,/usr/local/lib64 -Wl,-rpath,/usr/local/clmagma/lib -lclBLAS -lclmagma -lOpenCL"
+
+echo "${CXX_STD}" > src/Makevars
+echo "${PKG_CXXFLAGS}" >> src/Makevars
+echo "${PKG_LIBS}" >> src/Makevars
